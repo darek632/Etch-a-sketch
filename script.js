@@ -17,16 +17,32 @@ container.appendChild(lineBox);
     const smallBox = document.createElement("div");
 smallBox.setAttribute(
 "style", "height: 20px; width: 20px; border: 1px solid red;");
+smallBox.addEventListener("mouseenter", enter);
 lineBox.appendChild(smallBox);
+
 }
+
 };
 
+function enter (event)  { 
+    event.target.style.backgroundColor = "blue";
+}; 
 
 function fullGrid () { 
     for (i=0; i<16; i++) {
-        oneLine()
+        oneLine();
     }
-}
+ } ;
 
 fullGrid();
 
+
+
+// const sampleBox = document.createElement("div");
+// sampleBox.setAttribute("style", "height: 20px; width: 20px; border:1px solid green;");
+// container.appendChild(sampleBox);
+// sampleBox.addEventListener("mouseenter", clikidy)
+
+// function clikidy (event) { 
+//     event.target.style.backgroundColor = "blue";
+// }
