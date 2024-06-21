@@ -5,7 +5,7 @@ container.setAttribute(
    
 
 function oneLine () {
-    let n = 16;
+    let n=16;
     const lineBox = document.createElement("div");
     lineBox.classList.add("line");
     lineBox.setAttribute("style", "display:flex; flex: 1 1 100%; flex-wrap: wrap;");
@@ -36,7 +36,31 @@ function fullGrid () {
     }
  } ;
 
-fullGrid();
+ fullGrid();
+
+function getGridSize() { 
+    let input;
+
+    while (input === '' || input === null || input === undefined || typeof input !== 'number'|| 0 < input < 100 ) { 
+        input = prompt("Please enter a number to determine number of boxes per size",
+            "Between 0 and 100");
+       
+    }
+
+    return input;
+}
+
+    const userInput = getGridSize();
+
+
+    
+
+
+
+
+// if null/undefined or not a number betwenn 0 and 100 prompt again 
+// else answer equals n in function fullGrid and n in function
+
 
 
 
