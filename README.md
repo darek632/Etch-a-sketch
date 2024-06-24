@@ -3,6 +3,7 @@
 The first big project putting into work a lot of the DOM manipulation and event handling learned in the past few lessons, as well as lots of content from previous lessons. 
 
 -- What worked well?
+
 Explaining the project in small steps first, taking one small part of it and figuring out how this would work, playing with empty HTML/CSS to visualise how this could work, before heading to JS to actually write this code using DOM manipulation and event handling. 
 I felt more confident in 'linking' the various functions, to transform them from the basic individual functions, to actually work with user input/other functions to put the little parts all together. 
 
