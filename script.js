@@ -119,7 +119,9 @@ let iAmEmpty = '';
 console.log(Number(iAmEmpty));
 
 let iAmString = 'twetny is plenty diked';
-console.log(Number(iAmString));
+console.log(Number(iAmString)); 
+
+// checks for results of number with various non number values.
 
 
  // pseudo for button prompt
@@ -132,22 +134,5 @@ console.log(Number(iAmString));
  // 
 
 
-
-
-
-
 // if null/undefined or not a number betwenn 0 and 100 prompt again 
 // else answer equals n in function fullGrid and n in function
-
-
-
-
-
-// const sampleBox = document.createElement("div");
-// sampleBox.setAttribute("style", "height: 20px; width: 20px; border:1px solid green;");
-// container.appendChild(sampleBox);
-// sampleBox.addEventListener("mouseenter", clikidy)
-
-// function clikidy (event) { 
-//     event.target.style.backgroundColor = "blue";
-// }
