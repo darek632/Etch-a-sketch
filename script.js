@@ -16,7 +16,9 @@ container.setAttribute(
             selection = (prompt("Pick a number of boxes to have per side.","Between 0 and 100"));
 
             if (selection === null || selection === '') { 
-                return null;
+                return null; // additional check if null or undefined breaks out
+                // of the loop and whole function returns null, skipping the 
+                // while condition.
             }
 
             selection = Number(selection);
@@ -44,7 +46,7 @@ container.appendChild(lineBox);
     for (let j=0; j<n; j++) { 
     const smallBox = document.createElement("div");
 smallBox.setAttribute(
-"style", "flex: 1 1 0;  aspect-ratio: 1/1;  box-sizing: border-box; border: 1px solid red;");
+"style", "flex: 1 1 0;  aspect-ratio: 1/1;  box-sizing: border-box; ");
 smallBox.addEventListener("mouseenter", enter);
 lineBox.appendChild(smallBox);
 
@@ -65,8 +67,43 @@ function fullGrid () {
 
 fullGrid();
 
-
  }
+
+ // code below to execute by default, before user presses button.
+
+ function oneLine () {
+    let n=16; 
+    const lineBox = document.createElement("div");
+    lineBox.classList.add("line");
+    lineBox.setAttribute("style", "display:flex; flex: 1 1 100%; flex-wrap: wrap;");
+    lineBox.style.height = "calc(100%/n)" ;     
+container.appendChild(lineBox);
+
+    for (let j=0; j<n; j++) { 
+    const smallBox = document.createElement("div");
+smallBox.setAttribute(
+"style", "flex: 1 1 0;  aspect-ratio: 1/1;  box-sizing: border-box; ");
+smallBox.addEventListener("mouseenter", enter);
+lineBox.appendChild(smallBox);
+
+}
+
+};
+
+function enter (event)  { 
+    event.target.style.backgroundColor = "blue";
+}; 
+
+function fullGrid () { 
+   let n = 16;
+    for (i=0; i<n; i++) {
+        oneLine();
+    }
+ } ;
+
+ fullGrid();
+
+
 
 document.querySelector("#generator").addEventListener("click",updateGrid);
 
